@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>BIC21203 Lab 4b - Book (Q2)</title>
+    </head>
+    <body>
+        <h1>Book Collection Details</h1>
+        <div id="displayArea"></div>
+        <p id="errorMsg" style="color: red;"></p>
+
+        <script>
+            const displayArea = document.getElementById("displayArea");
+            const errorMsg = document.getElementById("errorMsg");
+
+            async function loadBooks() 
+            {
+                try 
+                {
+                    const response = await fetch("books.json");
+                
+                    if (!response.ok)
+                    {
+                    throw new Error("HTTP error! Status: " + response.status);
+                    }
+
+                    const data = await response.json();
+                    const books = data.books;
+                
+                    // (a) Title of the first book
+                    const p1 = document.createElement("p");
+                    p1.textContent = "Title of first book: " + books[0].title;
+                    displayArea.appendChild(p1);
+
+                    // (b) Author of the second book
+                    const p2 = document.createElement("p");
+                    p2.textContent = "Author of second book: " + books[1].author;
+                    displayArea.appendChild(p2);
+
+                    // (c) Genres of both books, grouped by book title
+                    const p3 = document.createElement("p");
+                    p3.textContent = books[0].title + " — " + books[0].genres.join(", ");
+                    displayArea.appendChild(p3);
+
+                    const p4 = document.createElement("p");
+                    p4.textContent = books[1].title + " — " + books[1].genres.join(", ");
+                    displayArea.appendChild(p4);
+
+                }
+                catch (error) 
+                {
+                    errorMsg.textContent = "Failed to load book data. Please check if books.json exists and is valid.";
+                    console.error("Error fetching JSON:", error);
+                }
+            }
+            loadBooks();
+        </script>
+    </body>
+</html>
