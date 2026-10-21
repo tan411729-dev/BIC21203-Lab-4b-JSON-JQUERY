@@ -30,26 +30,26 @@ This laboratory exercise covers practical client-side data handling and library 
 - **Description:** Created a valid `books.json` dataset featuring a top-level `books` array containing two book objects with typed properties (`title`, `author`, `publicationYear`, and a `genres` array of strings).
 - **Validation:** Confirmed valid JSON structure via JSONLint / JSON Validator.
 - **Output:**
-  ![Question 1 Output - JSON Code](screenshots/Q1 json.png)
-  ![Question 1 Output - JSON Validation](screenshots/Q1 validate.png)
+  ![Question 1 Output - JSON Code](screenshots/Q1%20json.png)
+  ![Question 1 Output - JSON Validation](screenshots/Q1%20validate.png)
 
 ---
 
 ### Question 2: Retrieve and Display JSON Data
 - **Description:** Uses the native `fetch()` API to asynchronously retrieve `books.json` and safely renders the first book's title, the second book's author, and both books' genres grouped by title. Includes error handling for failed requests.
 - **Output:**
-  ![Question 2 Error Handling](screenshots/Q2 failure.png)
-  ![Question 2 Success Output](screenshots/Q2 success.png)
+  ![Question 2 Error Handling](screenshots/Q2%20failure.png)
+  ![Question 2 Success Output](screenshots/Q2%20success.png)
 
 ---
 
-### Question 3: Dynamic Number Generator
+### Question 3: Compare Native JavaScript and jQuery
 - **Description:** Implements DOM text replacement using `.text()`, applies CSS styling using `.addClass()`, and registers click event listeners using `.on("click", ...)` via jQuery 4.0.0 CDN.
 - **Output:**
-  ![Question 3 Output - Style and Text](screenshots/Q3 before.png)
-  ![Question 3 Output - Alert](screenshots/Q3 after.png)
+  ![Question 3 Output - Style and Text](screenshots/Q3%20before.png)
+  ![Question 3 Output - Alert](screenshots/Q3%20after.png)
 
-## Conceptual Comparison (Question 3 Questions)
+## Conceptual Comparison
 - **Advantage of Native JavaScript:**
   Native JavaScript is faster to load and does not require external libraries.
 - **Situation where projects still use jQuery:**
